@@ -59,6 +59,7 @@ satellite-scheduling-env/
 ├── environment.py
 ├── grader.py
 └── tasks.py
+
 ## Why This Problem Matters
 
 Satellite task scheduling is an NP-hard combinatorial optimization problem used by ISRO, NASA, and ESA for real Earth observation missions. This environment lets RL agents learn to solve it from scratch.
