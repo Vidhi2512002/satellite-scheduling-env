@@ -1,21 +1,20 @@
 ---
 title: Satellite Scheduling RL Environment
-emoji: 🛰️
 colorFrom: blue
 colorTo: indigo
 sdk: docker
 pinned: false
 ---
 
-# 🛰️ Satellite Scheduling RL Environment
+#  Satellite Scheduling RL Environment
 
-> **Meta OpenEnv Hackathon 2026** — Real-world multi-satellite task scheduling RL environment built on the OpenEnv standard.
+> **Meta OpenEnv Hackathon 2026** - Real world multi-satellite task scheduling RL environment built on the OpenEnv standard.
 
 An AI agent must schedule satellite observation tasks across visibility windows, respecting storage constraints and orbital mechanics. This is a real operational problem used by space agencies worldwide.
 
 ---
 
-## 📊 Environment Overview
+##  Environment Overview
 
 ```
 EASY   → 3 satellites │  6 tasks │  8 timeslots │ No failure
@@ -61,7 +60,7 @@ crisis_response     ████████████████████
 
 ---
 
-## 📦 Action Space
+##  Action Space
 
 ```json
 {
@@ -71,7 +70,7 @@ crisis_response     ████████████████████
 }
 ```
 
-## 👁️ Observation Space
+##  Observation Space
 
 ```json
 {
@@ -93,7 +92,7 @@ crisis_response     ████████████████████
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ```python
 import requests
@@ -114,7 +113,7 @@ requests.post(f"{BASE}/step", json={"satellite_id": "DONE", "task_id": "DONE", "
 
 ---
 
-## 🧪 Local Setup
+##  Local Setup
 
 ```bash
 git clone <your-repo>
@@ -130,7 +129,7 @@ OPENENV_BASE_URL=http://localhost:7860 python inference.py
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 satellite-scheduling-env/
@@ -148,7 +147,7 @@ satellite-scheduling-env/
 
 ---
 
-## 🎯 Why This Problem Matters
+##  Why This Problem Matters
 
 Satellite task scheduling is an NP-hard combinatorial optimization problem used by:
 - ISRO for Earth observation missions
