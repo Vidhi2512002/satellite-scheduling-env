@@ -1,0 +1,44 @@
+name: satellite-scheduling-env
+version: 1.0.0
+description: "Multi-Satellite Task Scheduling RL Environment — real-world Earth observation scheduling problem"
+author: Vidhi
+license: MIT
+
+environment:
+  entry: server.app:app
+  port: 7860
+  reset_endpoint: /reset
+  step_endpoint: /step
+  state_endpoint: /state
+  health_endpoint: /health
+
+tasks:
+  - name: emergency_response
+    difficulty: easy
+    description: "3 satellites, 6 disaster tasks, 8 timeslots"
+  - name: climate_monitoring
+    difficulty: medium
+    description: "5 satellites, 15 climate tasks, 12 timeslots, storage limits"
+  - name: crisis_response
+    difficulty: hard
+    description: "8 satellites, 20 crisis tasks, satellite failure at step 12"
+
+action_space:
+  type: structured
+  fields:
+    satellite_id: string
+    task_id: string
+    timeslot: integer
+
+observation_space:
+  type: structured
+  fields:
+    task_name: string
+    satellites: list
+    pending_tasks: list
+    completed_tasks: list
+    score_so_far: float
+    step: integer
+    done: boolean
+    reward: float
+    message: string
