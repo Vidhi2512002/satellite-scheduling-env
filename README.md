@@ -1,7 +1,5 @@
 ---
 title: Satellite Scheduling RL Environment
-colorFrom: blue
-colorTo: indigo
 sdk: docker
 pinned: false
 ---
